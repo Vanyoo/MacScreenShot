@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2107D0F123F1C2D500EA41E3 /* ScreenCapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2107D0EE23F1C27E00EA41E3 /* ScreenCapture.framework */; };
+		213DD0C323F3CBA800369898 /* JietuFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213DD0C223F3CBA800369898 /* JietuFramework.framework */; };
+		213DD0C623F3CF4B00369898 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213DD0C523F3CF4B00369898 /* AFNetworking.framework */; };
+		213DD0C823F3CF4F00369898 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213DD0C723F3CF4F00369898 /* CocoaLumberjack.framework */; };
+		213DD0CA23F3CF7B00369898 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 213DD0C923F3CF7B00369898 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		213DD0CC23F3CF8700369898 /* JietuFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 213DD0CB23F3CF8700369898 /* JietuFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		213DD0CE23F3CF8C00369898 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 213DD0CD23F3CF8C00369898 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		213DD0D023F3CFAB00369898 /* ScreenCapture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 213DD0CF23F3CFAB00369898 /* ScreenCapture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5B188D81CFC1C18000A8A71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B188D71CFC1C18000A8A71 /* AppDelegate.m */; };
+		B5B188DB1CFC1C18000A8A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B188DA1CFC1C18000A8A71 /* main.m */; };
+		B5B188DD1CFC1C18000A8A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5B188DC1CFC1C18000A8A71 /* Assets.xcassets */; };
+		B5B188E01CFC1C18000A8A71 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B188DE1CFC1C18000A8A71 /* MainMenu.xib */; };
+		B5B189141CFC2421000A8A71 /* IconFonts in Resources */ = {isa = PBXBuildFile; fileRef = B5B189131CFC2421000A8A71 /* IconFonts */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2107D0F323F1C2D500EA41E3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				213DD0CE23F3CF8C00369898 /* AFNetworking.framework in Embed Frameworks */,
+				213DD0CA23F3CF7B00369898 /* CocoaLumberjack.framework in Embed Frameworks */,
+				213DD0CC23F3CF8700369898 /* JietuFramework.framework in Embed Frameworks */,
+				213DD0D023F3CFAB00369898 /* ScreenCapture.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2107D0EE23F1C27E00EA41E3 /* ScreenCapture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenCapture.framework; path = ../../../../Applications/DingTalk.app/Contents/Frameworks/ScreenCapture.framework; sourceTree = "<group>"; };
+		213DD0C223F3CBA800369898 /* JietuFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JietuFramework.framework; path = ../../../../Applications/WeChat.app/Contents/Frameworks/JietuFramework.framework; sourceTree = "<group>"; };
+		213DD0C523F3CF4B00369898 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = ../../../../Applications/WeChat.app/Contents/Frameworks/AFNetworking.framework; sourceTree = "<group>"; };
+		213DD0C723F3CF4F00369898 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = ../../../../Applications/WeChat.app/Contents/Frameworks/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		213DD0C923F3CF7B00369898 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = "<group>"; };
+		213DD0CB23F3CF8700369898 /* JietuFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JietuFramework.framework; sourceTree = "<group>"; };
+		213DD0CD23F3CF8C00369898 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
+		213DD0CF23F3CFAB00369898 /* ScreenCapture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ScreenCapture.framework; sourceTree = "<group>"; };
+		B5B188D31CFC1C18000A8A71 /* ScreenShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5B188D61CFC1C18000A8A71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5B188D71CFC1C18000A8A71 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5B188DA1CFC1C18000A8A71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5B188DC1CFC1C18000A8A71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5B188DF1CFC1C18000A8A71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B5B188E11CFC1C18000A8A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5B189131CFC2421000A8A71 /* IconFonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IconFonts; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5B188D01CFC1C18000A8A71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				213DD0C823F3CF4F00369898 /* CocoaLumberjack.framework in Frameworks */,
+				2107D0F123F1C2D500EA41E3 /* ScreenCapture.framework in Frameworks */,
+				213DD0C323F3CBA800369898 /* JietuFramework.framework in Frameworks */,
+				213DD0C623F3CF4B00369898 /* AFNetworking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2107D0EA23F1C17E00EA41E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				213DD0C723F3CF4F00369898 /* CocoaLumberjack.framework */,
+				213DD0C523F3CF4B00369898 /* AFNetworking.framework */,
+				213DD0C223F3CBA800369898 /* JietuFramework.framework */,
+				2107D0EE23F1C27E00EA41E3 /* ScreenCapture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5B188CA1CFC1C18000A8A71 = {
+			isa = PBXGroup;
+			children = (
+				213DD0CF23F3CFAB00369898 /* ScreenCapture.framework */,
+				213DD0CD23F3CF8C00369898 /* AFNetworking.framework */,
+				213DD0CB23F3CF8700369898 /* JietuFramework.framework */,
+				213DD0C923F3CF7B00369898 /* CocoaLumberjack.framework */,
+				B5B188D51CFC1C18000A8A71 /* ScreenCaptureTest */,
+				B5B188D41CFC1C18000A8A71 /* Products */,
+				2107D0EA23F1C17E00EA41E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B5B188D41CFC1C18000A8A71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5B188D31CFC1C18000A8A71 /* ScreenShot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5B188D51CFC1C18000A8A71 /* ScreenCaptureTest */ = {
+			isa = PBXGroup;
+			children = (
+				B5B1890F1CFC2406000A8A71 /* Resource */,
+				B5B188D61CFC1C18000A8A71 /* AppDelegate.h */,
+				B5B188D71CFC1C18000A8A71 /* AppDelegate.m */,
+				B5B188DC1CFC1C18000A8A71 /* Assets.xcassets */,
+				B5B188DE1CFC1C18000A8A71 /* MainMenu.xib */,
+				B5B188E11CFC1C18000A8A71 /* Info.plist */,
+				B5B188D91CFC1C18000A8A71 /* Supporting Files */,
+			);
+			path = ScreenCaptureTest;
+			sourceTree = "<group>";
+		};
+		B5B188D91CFC1C18000A8A71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5B188DA1CFC1C18000A8A71 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5B1890F1CFC2406000A8A71 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B5B189131CFC2421000A8A71 /* IconFonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5B188D21CFC1C18000A8A71 /* ScreenShot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5B188FA1CFC1C18000A8A71 /* Build configuration list for PBXNativeTarget "ScreenShot" */;
+			buildPhases = (
+				B5B188CF1CFC1C18000A8A71 /* Sources */,
+				B5B188D01CFC1C18000A8A71 /* Frameworks */,
+				B5B188D11CFC1C18000A8A71 /* Resources */,
+				2107D0F323F1C2D500EA41E3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenShot;
+			productName = ScreenCaptureTest;
+			productReference = B5B188D31CFC1C18000A8A71 /* ScreenShot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5B188CB1CFC1C18000A8A71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "凌星";
+				TargetAttributes = {
+					B5B188D21CFC1C18000A8A71 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B5B188CE1CFC1C18000A8A71 /* Build configuration list for PBXProject "ScreenShot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = B5B188CA1CFC1C18000A8A71;
+			productRefGroup = B5B188D41CFC1C18000A8A71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5B188D21CFC1C18000A8A71 /* ScreenShot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5B188D11CFC1C18000A8A71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5B189141CFC2421000A8A71 /* IconFonts in Resources */,
+				B5B188DD1CFC1C18000A8A71 /* Assets.xcassets in Resources */,
+				B5B188E01CFC1C18000A8A71 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5B188CF1CFC1C18000A8A71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5B188DB1CFC1C18000A8A71 /* main.m in Sources */,
+				B5B188D81CFC1C18000A8A71 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B5B188DE1CFC1C18000A8A71 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5B188DF1CFC1C18000A8A71 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5B188F81CFC1C18000A8A71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/DingTalk.app/Contents/Frameworks/,
+					/Applications/WeChat.app/Contents/Frameworks/,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Applications/DingTalk.app/Contents/Frameworks/ScreenCapture.framework,
+					/Applications/WeChat.app/Contents/Frameworks/JietuFramework.framework,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-WI",
+					"-Xlinker",
+					"-U",
+					"-Xlinker",
+					_objc_readClassPair,
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B5B188F91CFC1C18000A8A71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Applications/DingTalk.app/Contents/Frameworks/,
+					/Applications/WeChat.app/Contents/Frameworks/,
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Applications/DingTalk.app/Contents/Frameworks/ScreenCapture.framework,
+					/Applications/WeChat.app/Contents/Frameworks/JietuFramework.framework,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-WI",
+					"-Xlinker",
+					"-U",
+					"-Xlinker",
+					_objc_readClassPair,
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B5B188FB1CFC1C18000A8A71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenCaptureTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-WI",
+					"-Xlinker",
+					"-U",
+					"-Xlinker",
+					_objc_readClassPair,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = van.yzt.screen.shot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5B188FC1CFC1C18000A8A71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenCaptureTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-WI",
+					"-Xlinker",
+					"-U",
+					"-Xlinker",
+					_objc_readClassPair,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = van.yzt.screen.shot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5B188CE1CFC1C18000A8A71 /* Build configuration list for PBXProject "ScreenShot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5B188F81CFC1C18000A8A71 /* Debug */,
+				B5B188F91CFC1C18000A8A71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5B188FA1CFC1C18000A8A71 /* Build configuration list for PBXNativeTarget "ScreenShot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5B188FB1CFC1C18000A8A71 /* Debug */,
+				B5B188FC1CFC1C18000A8A71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5B188CB1CFC1C18000A8A71 /* Project object */;
+}
