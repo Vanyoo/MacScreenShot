@@ -7,9 +7,10 @@
 #import "AppDelegate.h"
 #import <ScreenCapture/WWCaptureManager.h>
 #import <JietuFramework/JTCaptureManager.h>
+#import <JietuFramework/JTCaptureRequest.h>
 #import <Carbon/Carbon.h>
 
-@interface AppDelegate ()<WWCaptureManagerDelegate>
+@interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
 
@@ -159,7 +160,7 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *
     } else if (sender == 2) {
         NSLog(@"Start wechat screen shot");
         self.wechatScreenShot = [JTCaptureManager sharedInstance];
-        [self.wechatScreenShot startCaptureByRequest:self.wechatScreenShot];
+        [self.wechatScreenShot startCaptureByRequest:[JTCaptureRequest sharedInstance]];
     }
 }
 
