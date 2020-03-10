@@ -26,34 +26,6 @@
 
 @end
 
-//static BOOL g_showFlag = YES;
-//static CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) {
-//    if (type > 0 && type <= MIN(kCGEventTapDisabledByTimeout, kCGEventTapDisabledByUserInput)) {
-//        NSEvent *theEvent = [NSEvent eventWithCGEvent:event];
-//        
-//        if ((theEvent.modifierFlags & NSDeviceIndependentModifierFlagsMask) == NSCommandKeyMask) {
-//            
-//            if (g_showFlag) {
-//                
-//                [((AppDelegate *)[NSApp delegate]).window orderOut:nil];
-//                g_showFlag = NO;
-//                
-//            } else {
-//                
-//                [((AppDelegate *)[NSApp delegate]).window orderFront:nil];
-//                g_showFlag = YES;
-//            }
-//            
-//            [[WWCaptureManager shareInstance] refreshShowInfo];
-//            
-//        } else if ((theEvent.modifierFlags & NSCommandKeyMask) && 55 == [theEvent keyCode]) {
-//         // cmd + c
-//            [[WWCaptureManager shareInstance] startCaptureWithDelegate:[NSApp delegate] fileType:NSJPEGFileType];
-//        }
-//    }
-//    return event; //让事件继续传播
-//}
-
 @implementation AppDelegate
 
 /**
@@ -112,32 +84,38 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *
 }
 
 - (void) statusBarInit {
+    [self changeDarkMode];
+}
+
+- (void) changeStatusBarIcon:(NSString*)imageName {
     // 获取系统的status bar
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
-    NSImage *image = [NSImage imageNamed:@"StatusBarWhite"];
+    NSImage *image = [NSImage imageNamed:imageName];
 
     // 设置图片
     [self.statusItem setImage: image];
     
     // 设置点击后的菜单
     [self.statusItem setMenu:[self statusBarMenuInit]];
-    
-//    CGEventMask eventMask = CGEventMaskBit(kCGEventFlagsChanged);
-//    CFMachPortRef eventTap = CGEventTapCreate(kCGHIDEventTap, kCGHeadInsertEventTap, kCGEventTapOptionListenOnly, eventMask, eventCallback, (__bridge void *)(self));
-//
-//    CFRunLoopSourceRef source = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0);
-//    CFRunLoopAddSource(CFRunLoopGetCurrent(), source, kCFRunLoopCommonModes);
-//    CGEventTapEnable(eventTap, true);
-//    
-//    if (source) {
-//        CFRelease(source);
-//    }
 }
 
 - (void)initializeScreenshots {
     self.dingdingScreenShot = [WWCaptureManager shareInstance];
 //    self.wechatScreenShot = [JTCaptureManager sharedInstance];
+}
+
+-(void)changeDarkMode {
+    NSString *osxMode = [[NSUserDefaults standardUserDefaults] stringForKey: @"AppleInterfaceStyle"];
+    if ([@"Dark" isEqualToString:osxMode]) {
+        [self changeStatusBarIcon:@"StatusBarWhite"];
+    } else {
+        [self changeStatusBarIcon:@"StatusBarBlack"];
+    }
+}
+
+-(void)darkModeChanged:(NSNotification *)notif {
+    [self changeDarkMode];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -146,6 +124,7 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *
     [self initializeScreenshots];
     [self statusBarInit];
     [self registerHotKey];
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(darkModeChanged:) name:@"AppleInterfaceThemeChangedNotification" object:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -174,5 +153,6 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *
     NSImage *image = [[NSImage alloc] initWithData:imageData];
     self.imageView.image = image;
 }
+
 
 @end
