@@ -124,6 +124,7 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *
     [self initializeScreenshots];
     [self statusBarInit];
     [self registerHotKey];
+    [self changeDarkMode];
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(darkModeChanged:) name:@"AppleInterfaceThemeChangedNotification" object:nil];
 }
 
