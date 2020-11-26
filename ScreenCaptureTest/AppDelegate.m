@@ -84,38 +84,36 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *
 }
 
 - (void) statusBarInit {
-    [self changeDarkMode];
-}
-
-- (void) changeStatusBarIcon:(NSString*)imageName {
     // 获取系统的status bar
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     
-    NSImage *image = [NSImage imageNamed:imageName];
+    NSImage *image = [NSImage imageNamed:@"StatusBarWhite"];
 
     // 设置图片
     [self.statusItem setImage: image];
     
     // 设置点击后的菜单
     [self.statusItem setMenu:[self statusBarMenuInit]];
+    
+    [self.statusItem addObserver:self forKeyPath:@"button.effectiveAppearance" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionInitial context:nil];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if([keyPath isEqualToString:@"button.effectiveAppearance"]){
+        NSStatusItem*item=object;
+        NSAppearance*appearance=item.button.effectiveAppearance;
+        NSString*appearanceName=(NSString*)(appearance.name);
+        if([[appearanceName lowercaseString] containsString:@"dark"]){
+            [item setImage:[NSImage imageNamed:@"StatusBarWhite"]];
+        }else{
+            [item setImage:[NSImage imageNamed:@"StatusBarBlack"]];
+        }
+    }
 }
 
 - (void)initializeScreenshots {
     self.dingdingScreenShot = [WWCaptureManager shareInstance];
 //    self.wechatScreenShot = [JTCaptureManager sharedInstance];
-}
-
--(void)changeDarkMode {
-    NSString *osxMode = [[NSUserDefaults standardUserDefaults] stringForKey: @"AppleInterfaceStyle"];
-    if ([@"Dark" isEqualToString:osxMode]) {
-        [self changeStatusBarIcon:@"StatusBarWhite"];
-    } else {
-        [self changeStatusBarIcon:@"StatusBarBlack"];
-    }
-}
-
--(void)darkModeChanged:(NSNotification *)notif {
-    [self changeDarkMode];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -124,8 +122,6 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *
     [self initializeScreenshots];
     [self statusBarInit];
     [self registerHotKey];
-    [self changeDarkMode];
-    [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(darkModeChanged:) name:@"AppleInterfaceThemeChangedNotification" object:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
